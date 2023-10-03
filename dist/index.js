@@ -558,7 +558,7 @@ select {
 }
 `);
 
-// src/lib/index.tsx
+// src/lib/index.ts
 import { clsx } from "clsx";
 import { jsx } from "react/jsx-runtime";
 function Toaster() {
