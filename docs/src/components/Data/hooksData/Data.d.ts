@@ -4,7 +4,7 @@ interface TableData {
   description: string
 }
 
-export interface Data {
+export interface IData {
   name: string
   title: string
   description: string

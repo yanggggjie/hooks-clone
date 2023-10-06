@@ -1,4 +1,4 @@
-const ads = [
+const Index = [
   {
     image: 'https://usehooks.com/img/d20.svg',
     title:
@@ -19,4 +19,4 @@ const ads = [
       'The all new interactive way to master modern React (for fun and profit).',
   },
 ]
-export { ads }
+export { Index }

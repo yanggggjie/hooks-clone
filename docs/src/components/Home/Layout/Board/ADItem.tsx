@@ -6,7 +6,7 @@ interface Props {
 
 function Component({ image, title }: Props) {
   return (
-    <div
+    <button
       className={clsx(
         'w-96 border-2 bg-[#0f0d0e] rounded-xl border-[#221f20]',
         'flex flex-col items-center gap-4',
@@ -20,7 +20,7 @@ function Component({ image, title }: Props) {
         alt={'react-gg'}
       />
       <p className={clsx('w-80 mb-7 text-center')}>{title}</p>
-    </div>
+    </button>
   )
 }
 

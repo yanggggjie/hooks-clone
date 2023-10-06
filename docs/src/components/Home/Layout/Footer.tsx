@@ -1,11 +1,10 @@
 import { clsx } from 'clsx'
 interface Props {}
-import { Demo } from '@components/Data/hooksData/useDebounce/index.js'
+
 function Component({}: Props) {
   return (
-    <div>
-      in test
-      <Demo></Demo>
+    <div className={clsx('text-white')}>
+      <div>footer</div>
     </div>
   )
 }

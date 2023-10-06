@@ -21,7 +21,7 @@ function Component({}: Props) {
         return ImportedDemo
       })
     })
-  }, [hooksName]) // 添加 hooksName 作为依赖
+  }, [hooksName])
 
   return (
     <div>

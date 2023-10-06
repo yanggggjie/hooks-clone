@@ -1,7 +1,7 @@
 import demo from './demo.js?raw'
-import { Data } from '@components/Data/Data.js'
+import { IData } from '@components/Data/hooksData/Data.js'
 
-export const data: Data = {
+export const data: IData = {
   name: 'useDebounce',
   title: 'Delay the execution of function or state update with useDebounce',
   description: `The useDebounce hook is useful for delaying the execution of functions or state updates until a specified time period has passed without any further changes to the input value. This is especially useful in scenarios such as handling user input or triggering network requests, where it effectively reduces unnecessary computations and ensures that resource-intensive operations are only performed after a pause in the input activity.`,

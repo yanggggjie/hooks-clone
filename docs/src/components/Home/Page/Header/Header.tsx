@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { useClipboard } from '@components/Home/Header/useClipboard.js'
+import { useClipboard } from '@components/Home/Page/Header/useClipboard.js'
 import { useEffect, useRef, useState } from 'react'
 interface Props {}
 
@@ -26,15 +26,10 @@ function Component({}: Props) {
   }
   return (
     <div>
-      <div className={clsx('flex flex-row items-center justify-between')}>
+      <div className={clsx('inline', 'absolute left-4')}>
         <img
           className={clsx('w-10')}
           src="https://usehooks.com/img/ui-logo.svg"
-          alt={'logo'}
-        />
-        <img
-          className={clsx('w-10')}
-          src="https://usehooks.com/img/icon-github.svg"
           alt={'logo'}
         />
       </div>
