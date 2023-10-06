@@ -8,7 +8,8 @@ function Component({ image, title }: Props) {
   return (
     <button
       className={clsx(
-        'w-96 border-2 bg-[#0f0d0e] rounded-xl border-[#221f20]',
+        'hover:scale-[1.05] transition-transform',
+        'w-96 border-2 bg-iblack rounded-xl border-igray',
         'flex flex-col items-center gap-4',
       )}
       key={image}

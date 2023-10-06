@@ -5,7 +5,16 @@ export default {
     preflight: true,
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        iblack: '#0f0d0e',
+        igray: '#221f20',
+        iblue: '#53b2e0',
+        iyellow: '#f2bd4c',
+        iwhite: '#f8f4dd',
+        igreen: '#48995c',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

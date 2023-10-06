@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 import { useEffect, useState } from 'react'
 import HooksItem from '@components/Home/Layout/Board/HooksItem.js'
-import { hooksList } from '@components/Data/hooksData/index.js'
+import { hooksList } from '@components/Data/hooksData/hooksList.js'
 import { Index } from '@components/Data/ADdata/index.js'
 import ADItem from '@components/Home/Layout/Board/ADItem.js'
 import SortButton from '@components/Home/Layout/Board/SortButton.js'
@@ -22,14 +22,15 @@ function Component({}: Props) {
   }
 
   useEffect(() => {
-    hooksList.map((item) => {
-      import(`@components/Data/hooksData/${item}/index.ts`)
+    hooksList.forEach((item) => {
+      import(`@components/Data/hooksData/${item}/data.ts`)
         .then((res) => {
           const { data } = res
-          const { name, title } = data
-          addToHooksStateList({ name, title })
+          addToHooksStateList(data)
         })
-        .catch(() => {})
+        .catch(() => {
+          // console.log('error in import hooksData')
+        })
     })
   }, [])
 
@@ -43,12 +44,12 @@ function Component({}: Props) {
     )
   })
   const ADArr = Index.map(({ image, title }) => {
-    return <ADItem image={image} title={title}></ADItem>
+    return <ADItem key={title} image={image} title={title}></ADItem>
   })
   const renderArr = [...HooksArr, ...ADArr]
 
   return (
-    <div className={clsx('text-white p-10')}>
+    <div className={clsx('p-10')}>
       <div className={clsx('flex flex-row items-center', 'pr-11 pb-3')}>
         <div className={'grow'}></div>
         <SortButton setHooksStateList={setHooksStateList}></SortButton>

@@ -1,4 +1,4 @@
-import demo from './demo.js?raw'
+import demo from './demo.jsx?raw'
 import { IData } from '@components/Data/hooksData/Data.js'
 
 export const data: IData = {
@@ -20,5 +20,5 @@ export const data: IData = {
       description: `The debounced value. After the delay time has passed without the value changing, this will be updated to the latest value.`,
     },
   ],
-  demo: demo,
+  demoCode: demo,
 }

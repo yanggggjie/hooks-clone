@@ -1,8 +1,10 @@
-import { clsx } from 'clsx'
-interface Props {}
-
-function Component({}: Props) {
-  return <div>useDebounce is awsome</div>
+function Component() {
+  return (
+    <div>
+      in useDebounce in useDebounce in useDebounce in useDebounce in useDebounce
+      in useDebounce in useDebounce in useDebounce in useDebounce in useDebounce
+    </div>
+  )
 }
 
 export default Component

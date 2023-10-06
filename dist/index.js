@@ -1,23 +1,22 @@
 // #style-inject:#style-inject
 function styleInject(css, { insertAt } = {}) {
-  if (!css || typeof document === "undefined")
-    return;
-  const head = document.head || document.getElementsByTagName("head")[0];
-  const style = document.createElement("style");
-  style.type = "text/css";
-  if (insertAt === "top") {
+  if (!css || typeof document === 'undefined') return
+  const head = document.head || document.getElementsByTagName('head')[0]
+  const style = document.createElement('style')
+  style.type = 'text/css'
+  if (insertAt === 'top') {
     if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
+      head.insertBefore(style, head.firstChild)
     } else {
-      head.appendChild(style);
+      head.appendChild(style)
     }
   } else {
-    head.appendChild(style);
+    head.appendChild(style)
   }
   if (style.styleSheet) {
-    style.styleSheet.cssText = css;
+    style.styleSheet.cssText = css
   } else {
-    style.appendChild(document.createTextNode(css));
+    style.appendChild(document.createTextNode(css))
   }
 }
 
@@ -556,15 +555,16 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
-`);
+`)
 
-// src/lib/index.ts
-import { clsx } from "clsx";
-import { jsx } from "react/jsx-runtime";
+// src/lib/hooksList.ts
+import { clsx } from 'clsx'
+import { jsx } from 'react/jsx-runtime'
 function Toaster() {
-  return /* @__PURE__ */ jsx("div", { className: clsx("bg-red-100"), children: /* @__PURE__ */ jsx("h1", { children: "Toaster" }) });
+  return /* @__PURE__ */ jsx('div', {
+    className: clsx('bg-red-100'),
+    children: /* @__PURE__ */ jsx('h1', { children: 'Toaster' }),
+  })
 }
-export {
-  Toaster
-};
+export { Toaster }
 //# sourceMappingURL=index.js.map

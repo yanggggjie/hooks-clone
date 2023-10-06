@@ -8,7 +8,13 @@ function Component({ hooksList }: Props) {
   const navigate = useNavigate()
 
   return (
-    <div className={clsx('flex flex-row items-center gap-10', 'px-5')}>
+    <div
+      className={clsx(
+        'text-igray',
+        'flex flex-row items-center gap-10',
+        'px-5',
+      )}
+    >
       {hooksList.map((item) => {
         function handleClick() {
           navigate(`/${item}`)
@@ -18,14 +24,12 @@ function Component({ hooksList }: Props) {
           <button onClick={handleClick} key={item}>
             <div
               className={clsx(
-                'bg-[#f8f4dd] py-1 px-2  rounded outline outline-black ',
+                'bg-iwhite py-1 px-2  rounded outline outline-black ',
               )}
             >
               {item}
             </div>
-            <div
-              className={clsx('border-[#f2bd4c] border-b-8 rounded-b')}
-            ></div>
+            <div className={clsx('border-iyellow border-b-8 rounded-b')}></div>
           </button>
         )
       })}

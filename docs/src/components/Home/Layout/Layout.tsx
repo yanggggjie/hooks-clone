@@ -9,8 +9,8 @@ interface Props {}
 function Component({}: Props) {
   return (
     <div>
-      <div className={clsx('bg-[#221f20] p-4')}>
-        <div className={clsx('bg-[#0f0d0e] p-4', 'relative')}>
+      <div className={clsx('bg-igray  p-4')}>
+        <div className={clsx('bg-iblack p-4', 'relative')}>
           <Header></Header>
           <Outlet></Outlet>
           <Board></Board>

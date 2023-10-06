@@ -1,15 +1,26 @@
 import { clsx } from 'clsx'
+import { useNavigate } from 'react-router-dom'
 interface Props {
   name: string
   title: string
 }
 
 function Component({ name, title }: Props) {
+  const navigate = useNavigate()
+
+  function handleClick() {
+    navigate(`/${name}`)
+  }
+
   return (
-    <button className={clsx('w-96 rounded p-7 bg-[#211f20]')}>
-      <div className={clsx('font-bold text-xl text-[#52afdd] py-3')}>
-        {name}
-      </div>
+    <button
+      onClick={handleClick}
+      className={clsx(
+        'hover:scale-[1.05] transition-transform',
+        'w-96 rounded p-7 bg-igray',
+      )}
+    >
+      <div className={clsx('font-bold text-xl text-iblue py-3')}>{name}</div>
       <div>{title}</div>
       <div className={clsx('flex flex-row items-center')}>
         <div className={clsx('grow')}></div>

@@ -2,7 +2,7 @@ import { clsx } from 'clsx'
 interface Props {}
 import Marquee from 'react-fast-marquee'
 import HooksList from '@components/Home/Page/Banner/HooksList.js'
-import { hooksList } from '@components/Data/hooksData/index.js'
+import { hooksList } from '@components/Data/hooksData/hooksList.js'
 
 function Component({}: Props) {
   const leftList = hooksList.filter((_, index) => {

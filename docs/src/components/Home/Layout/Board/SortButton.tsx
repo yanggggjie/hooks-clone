@@ -15,22 +15,27 @@ function Component({ setHooksStateList }: Props) {
   function handleSortByPopular() {
     setSort(Sort.Popular)
     setHooksStateList((prev) => {
-      return prev.sort((a, b) => {
-        return a.name.length - b.name.length
-      })
+      return prev
+        .sort((a, b) => {
+          return b.name.length - a.name.length
+        })
+        .slice()
     })
   }
   function handleSortByName() {
     setSort(Sort.Name)
     setHooksStateList((prev) => {
-      return prev.sort((a, b) => {
-        return a.name.localeCompare(b.name)
-      })
+      return prev
+        .slice()
+        .sort((a, b) => {
+          return a.name.localeCompare(b.name)
+        })
+        .slice()
     })
   }
 
   return (
-    <div className={clsx('text-white space-x-2')}>
+    <div className={clsx(' space-x-2')}>
       Sort:{' '}
       <Button
         isActive={sort === Sort.Popular}
@@ -57,9 +62,7 @@ function Button({
   return (
     <button
       className={clsx(
-        isActive
-          ? 'bg-[#f2bd4c] text-black'
-          : 'text-white bg-black border-white border',
+        isActive ? 'bg-iyellow text-iblack' : ' bg-iblack border-iwhite border',
         'rounded-md py-1 px-2',
       )}
       onClick={onClick}

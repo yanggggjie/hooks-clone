@@ -1,4 +1,4 @@
-interface TableData {
+export interface TableData {
   name: string
   type: string
   description: string
@@ -10,5 +10,5 @@ export interface IData {
   description: string
   parameters?: TableData[]
   returnValues?: TableData[]
-  demo: string
+  demoCode: string
 }
