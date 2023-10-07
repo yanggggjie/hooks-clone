@@ -10,25 +10,57 @@ interface Props {
   Demo: any
 }
 
+function SectionTitle({ str }: { str: string }) {
+  return (
+    <h1 className={clsx('py-3 font-bold text-xl uppercase tracking-widest')}>
+      {str}
+    </h1>
+  )
+}
+
 function Component({ data, Demo }: Props) {
   return (
-    <>
+    <div className={clsx('space-y-8')}>
       <img
         className={clsx('w-36', 'absolute -top-3 left-8')}
         alt={'image'}
         src="https://usehooks.com/img/logo-useHooks.svg"
       />
       <Header name={data.name} title={data.title}></Header>
-      <Install bg={'black'}></Install>
-      <Description
-        name={data.name}
-        description={data.description}
-      ></Description>
-      <Table tableData={data.parameters}></Table>
-      <Table tableData={data.returnValues}></Table>
-      <Demo></Demo>
-      <ExampleCode code={data.demoCode}></ExampleCode>
-    </>
+
+      <div>
+        <SectionTitle str={'install :'} />
+        <Install bg={'black'}></Install>
+      </div>
+
+      <div>
+        <SectionTitle str={'description :'} />
+        <Description
+          name={data.name}
+          description={data.description}
+        ></Description>
+      </div>
+
+      <div>
+        <SectionTitle str={'parameters'} />
+        <Table tableData={data.parameters}></Table>
+      </div>
+
+      <div>
+        <SectionTitle str={'return values'} />
+        <Table tableData={data.returnValues}></Table>
+      </div>
+
+      <div>
+        <SectionTitle str={'demo:'} />
+        <Demo></Demo>
+      </div>
+
+      <div>
+        <SectionTitle str={'example:'} />
+        <ExampleCode code={data.demoCode}></ExampleCode>
+      </div>
+    </div>
   )
 }
 

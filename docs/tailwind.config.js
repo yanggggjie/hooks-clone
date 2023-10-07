@@ -9,6 +9,7 @@ export default {
       colors: {
         iblack: '#0f0d0e',
         igray: '#221f20',
+        ilightgray: '#383533',
         iblue: '#53b2e0',
         iyellow: '#f2bd4c',
         iwhite: '#f8f4dd',

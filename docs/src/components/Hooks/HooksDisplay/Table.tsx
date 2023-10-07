@@ -1,28 +1,31 @@
 import { clsx } from 'clsx'
-import { IData, TableData } from '@components/Data/hooksData/Data.js'
+import { TableData } from '@components/Data/hooksData/Data.js'
 interface Props {
   tableData: TableData[]
 }
 
 function Component({ tableData }: Props) {
   return (
-    <div>
+    <div className={clsx('pr-52')}>
       {tableData && (
-        <table>
+        <table className={clsx('table-fixed w-full border-collapse')}>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Description</th>
+            <tr className={clsx('bg-ilightgray border-ilightgray border')}>
+              <td className={clsx('w-20 p-2')}>Name</td>
+              <td className={clsx('w-20 p-2')}>Type</td>
+              <td className={clsx('p-2')}>Description</td>
             </tr>
           </thead>
           <tbody>
-            {tableData.map((value) => {
+            {tableData.map((data) => {
               return (
-                <tr>
-                  <td className={clsx('w-36')}>{value.name}</td>
-                  <td>{value.type}</td>
-                  <td className={clsx('w-72')}>{value.description}</td>
+                <tr
+                  className={clsx('border-ilightgray border')}
+                  key={data.name}
+                >
+                  <td className={clsx('break-all p-2')}>{data.name}</td>
+                  <td className={clsx('break-all p-2')}>{data.type}</td>
+                  <td className={clsx('break-all p-2')}>{data.description}</td>
                 </tr>
               )
             })}

@@ -63,6 +63,7 @@ function Button({
     <button
       className={clsx(
         isActive ? 'bg-iyellow text-iblack' : ' bg-iblack border-iwhite border',
+        'hover:bg-igray',
         'rounded-md py-1 px-2',
       )}
       onClick={onClick}
