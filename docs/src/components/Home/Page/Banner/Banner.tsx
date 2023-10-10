@@ -3,6 +3,7 @@ interface Props {}
 import Marquee from 'react-fast-marquee'
 import HooksList from '@components/Home/Page/Banner/HooksList.js'
 import { hooksList } from '@components/Data/hooksData/hooksList.js'
+import React from 'react'
 
 function Component({}: Props) {
   const leftList = hooksList.filter((_, index) => {
